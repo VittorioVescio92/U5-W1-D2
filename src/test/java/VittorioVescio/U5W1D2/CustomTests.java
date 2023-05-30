@@ -29,7 +29,7 @@ public class CustomTests {
 
 		double totale = totOrdine(prodotti);
 		double totaleAtteso = 6.50;
-		Assertions.assertEquals(totaleAtteso, totale, 0.001);
+		Assertions.assertEquals(totaleAtteso, totale);
 	}
 
 	public double totOrdine(List<Prodotto> p) {
