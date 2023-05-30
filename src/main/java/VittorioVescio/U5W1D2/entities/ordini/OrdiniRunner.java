@@ -38,8 +38,9 @@ public class OrdiniRunner implements CommandLineRunner {
 		Ferrarelle ferrarelle = (Ferrarelle) ctx.getBean("ferrarelle");
 		Tavolo tavolo1 = new Tavolo(1, 4, StatoTavolo.LIBERO);
 		List<Prodotto> lista = new ArrayList<>(Arrays.asList(margherita, ferrarelle));
-		Ordine ord1 = new Ordine(tavolo1, lista, 1, StatoOrdine.IN_CORSO, 1, LocalDateTime.of(2023, 05, 30, 12, 30));
-
+		Ordine ord1 = new Ordine(tavolo1, lista, 1, StatoOrdine.IN_CORSO, 2, LocalDateTime.of(2023, 05, 30, 12, 30));
+		System.out.println("prova " + ord1.getCostoCoperto());
+		System.out.println("prova 2 " + ord1.getCostoCopertoTot());
 		System.out.println(margherita.toString());
 		System.out.println(boscaiola.toString());
 		System.out.println(hawaiana.toString());
